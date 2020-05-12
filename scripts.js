@@ -1,35 +1,34 @@
-const player1 = document.getElementById('player1');
-const score1 = document.getElementById('score1');
-const newScore1 = document.getElementById('newScore1');
-const addScore1Btn = document.getElementById('addScore1');
-const newPlayer1 = document.getElementById('newPlayer1');
-const addNewPlayer1Btn = document.getElementById('addNewPlayer1');
+const player1Name = document.getElementById('player1Name');
+const player1ScoreDisplay = document.getElementById('player1ScoreDisplay');
+const player1ScoreInput = document.getElementById('player1ScoreInput');
+const player1AddScoreButton = document.getElementById('player1AddScoreButton');
+const player1NameInput = document.getElementById('player1NameInput');
+const player1NameInputButton = document.getElementById('player1NameInputButton');
 
-addNewPlayer1Btn.addEventListener('click', ($event) => {
-    $event.preventDefault ();
-    player1.textContent = newPlayer1.value;
+
+
+player1NameInputButton.addEventListener('click', ($event) => {
+$event.preventDefault ();
+player1Name.textContent  = player1NameInput.value;
 });
 
 
+player1AddScoreButton.addEventListener('click', ($event) => {
+$event.preventDefault ();
 
-
-addScore1Btn.addEventListener('click', ($event) => {
-    $event.preventDefault ();
-    // score1.textContent = newScore1.value;
-
-    let oldScore = score1.innerHTML ? parseInt(score1.innerHTML) : 0
-    let scoreInput = parseInt(newScore1.value)
+    let oldScore = player1ScoreDisplay.innerHTML ? parseInt(player1ScoreDisplay.innerHTML) : 0
+    let scoreInput = parseInt(player1ScoreInput.value)
     let newScore = oldScore + scoreInput;
 
 
     console.log ('this is the score: ' + newScore)
 
-    score1.innerHTML =  newScore; 
+    player1ScoreDisplay.innerHTML =  newScore; 
 });
 
 
-if(score1.innerHTML)
+// if(score1.innerHTML)
 
-   oldScore = parseInt(score1.innerHTML)
-else
-   oldScore = 0
+//    oldScore = parseInt(score1.innerHTML)
+// else
+//    oldScore = 0
