@@ -15,11 +15,21 @@ addNewPlayer1Btn.addEventListener('click', ($event) => {
 
 addScore1Btn.addEventListener('click', ($event) => {
     $event.preventDefault ();
-    score1.textContent = newScore1.value;
+    // score1.textContent = newScore1.value;
 
-    // score1.value = score1.value + newScore1.value;
-    
-    // let oldScore = score1;    
-    // let newScore = newScore1;
-    // newScore1.value = oldScore + newScore; 
+    let oldScore = score1.innerHTML ? parseInt(score1.innerHTML) : 0
+    let scoreInput = parseInt(newScore1.value)
+    let newScore = oldScore + scoreInput;
+
+
+    console.log ('this is the score: ' + newScore)
+
+    score1.innerHTML =  newScore; 
 });
+
+
+if(score1.innerHTML)
+
+   oldScore = parseInt(score1.innerHTML)
+else
+   oldScore = 0
