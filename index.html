@@ -16,22 +16,63 @@
 
 <body>
     <h1>10.000! <i class="fas fa-dice"></i></h1>
+    <hr>
     <div class="container">
-            <div class="players">
+        <div class="players">
+            <div id="dice">
+            <i class="fas fa-dice-one"></i>
+            <i class="fas fa-dice-two"></i>
+            <i class="fas fa-dice-three"></i>
+            <i class="fas fa-dice-four"></i>
+            <i class="fas fa-dice-five"></i>
+            <i class="fas fa-dice-six"></i>
+            </div>
+            <div id="player1">
                 <h2 id="player1Name">Player 1</h2>
                 <div class="score">
-                    <h3>Score</h3>
-                    <span id="player1ScoreDisplay">0</span>
-                  
+                    <h2>Score</h2>
+                    <ul id="player1ScoreDisplay" class="scoreDisplay">
+                        <li>0</li>
+                    </ul>
+
                 </div>
                 <input id="player1ScoreInput" type="number" class="scoreInput" required><br>
                 <button type="button" id="player1AddScoreButton" class="btn">Add Score</button><br>
 
                 <input id="player1NameInput" type="text" class="Player" required><br>
-                <button type="button" id="player1NameInputButton" class="btn">Change Player</button>
+                <button type="button" id="player1NameInputButton" class="btn">Change Player Name</button>
+                
+            </div>
+            <div id="player2">
+                <h2 id="player2Name">Player 2</h2>
+                <div class="score">
+                    <h2>Score</h2>
+                    <ul id="player2ScoreDisplay" class="scoreDisplay">
+                        <li>0</li>
+                    </ul>
+
+                </div>
+                <input id="player2ScoreInput" type="number" class="scoreInput" required><br>
+                <button type="button" id="player2AddScoreButton" class="btn">Add Score</button><br>
+
+                <input id="player1NameInput" type="text" class="Player" required><br>
+                <button type="button" id="player2NameInputButton" class="btn">Change Player Name</button>
+                
             </div>
         </div>
+        <div id='player1AddRemoveButtons' class='addRemoveButtons'>
+            <button onclick="showPlayer2Function()" id="showPlayer2" class="btn">Add one Player</button><br>
+        </div>
+        <div id='player2AddRemoveButtons' class='addRemoveButtons'>
+            <button onclick="showPlayer3Function()" id="showPlayer3" class="btn">Add one Player</button><br>
+            <button onclick="removePlayer2Function()" id="removePlayer2" class="btn">Remove one Player</button>
+        </div>
     </div>
+    <hr>
+    <footer>
+        <p>RS 2020</p>
+    </footer>
+
 
     <script src="scripts.js"></script>
 

@@ -1,14 +1,78 @@
+$background: #48ada8;
+$font-color: #ffffff;
+$btn-color: black;
+$heading-color: black;
+
+
 body {
     font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
-
+    background-color: $background;
+    color: $font-color;
   }
 
 h1 {
     text-align: center;
+    color: $font-color;
 }
 
-.container{
+hr {
+    border: solid 3px black;
+}
+
+h2 {
+    color: $heading-color;
+}
+
+#player1 {
+    display: block; 
+}
+
+#player1AddRemoveButtons {
+    display: block;
+}
+
+#player2 {
+    display: none;
+}
+
+#player2AddRemoveButtons {
+    display: none;
+}
+
+.players { 
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+}
+
+#dice { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 30px;
+}
+
+.scoreDisplay {
+    font-size: 20px;
+    list-style: none;
+}
+
+.btn {
+    background-color: $btn-color;
+    color: $font-color;
+    
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.addRemoveButtons {
+    margin: 20px 0;
+}
+
+footer {
+    font-size: 8px;
 }
