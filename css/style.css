@@ -21,15 +21,31 @@ h2 {
   display: block;
 }
 
-#player1AddRemoveButtons {
-  display: block;
-}
-
 #player2 {
   display: none;
 }
 
+#player3 {
+  display: none;
+}
+
+#player4 {
+  display: none;
+}
+
+#player1AddRemoveButtons {
+  display: block;
+}
+
 #player2AddRemoveButtons {
+  display: none;
+}
+
+#player3AddRemoveButtons {
+  display: none;
+}
+
+#player4AddRemoveButtons {
   display: none;
 }
 
@@ -44,6 +60,12 @@ h2 {
   flex-direction: column;
   justify-content: space-evenly;
   font-size: 30px;
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .scoreDisplay {
