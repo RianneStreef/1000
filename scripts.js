@@ -37,6 +37,9 @@ $event.preventDefault ();
     let scoreInput = parseInt(player1ScoreInput.value)
     let newScore = oldScore + scoreInput;
 
+    if (newScore > 10000 ) {
+        alert("Total score is too high!");
+    } else {
     let newDisplayScore = document.createElement('li');
     let newScoreInput = document.createElement('li');
 
@@ -56,10 +59,10 @@ $event.preventDefault ();
     console.log ('this is they array length: ' + player1AllScores.length) // so it actually did work! 
 
     console.log ('this is the new score input' + newScoreInput)
-
-    
-
+    }
 });
+
+
 
 function showPlayer2Function() {
    
